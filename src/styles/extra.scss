@@ -211,7 +211,7 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
 .blog-logo {
   display: block;
   box-sizing: border-box;
-  width: 20.83333333%;
+  width: 18.83333333%;
   height: 64px;
 }
 
@@ -244,6 +244,13 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
 .search {
   line-height: 64px;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  flex-flow: row;
+  flex: 1 100px;
+}
+
+
+.login-card {
+  width: 420px;
+  height: 370px;
+  margin: 120px auto 0;
 }

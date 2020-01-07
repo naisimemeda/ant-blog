@@ -1,13 +1,16 @@
 <template>
     <div class="search">
-        <div class="width-80">
-            <a-button shape="circle" icon="search"/>
+        <div class="header-icon">
+            <a-icon type="search"/>
         </div>
-        <div class="width-120">
-            <a-button :type="Type == 'Login' ? 'primary' : ''" @click="Login">登陆</a-button>
+        <div class="header-icon">
+            <a-icon type="bell" />
         </div>
-        <div class="width-120">
-            <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login">发布文章</a-button>
+        <div class="logo-button">
+            <a-button :type="Type == 'Login' ? 'primary' : ''" @click="Login" shape="round">登陆</a-button>
+        </div>
+        <div class="logo-button">
+            <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
         </div>
     </div>
 </template>
@@ -32,3 +35,9 @@
         }
     }
 </script>
+<style scoped>
+    .logo-button {
+        width: 120px;
+        text-align: center;
+    }
+</style>
