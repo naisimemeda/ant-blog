@@ -7,8 +7,18 @@ body {
   background: #f0f2f5;
 }
 
+@media (min-width: 768px) {
+  #wrap {
+    min-height:100%;
+    position:relative;
+  }
+}
+
 .container {
-  padding: 0 7px;
+  //background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px 80px 10px 70px;
 }
 
 #wrap {
@@ -39,10 +49,6 @@ body {
 .display-none {
   display: none
 }
-.red {
-  color: red;
-}
-
 
 .margin-right16 {
   margin-right: 16px;
@@ -62,4 +68,13 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin: 13px 0;
+}
+
+.row-flex {
+  margin: 20px 80px 10px 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 70%;
+  display: flex;
+  flex-flow: row wrap;
 }

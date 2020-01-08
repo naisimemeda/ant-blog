@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="margin: 0 auto">
         <a-card title="登陆" :bordered="false" class="login-card" :headStyle="headStyle" :bodyStyle="bodyStyle">
             <div class="content">
                 <div class="form-group">
