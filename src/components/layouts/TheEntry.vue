@@ -1,17 +1,19 @@
 <template>
     <div class="search">
-        <div class="header-icon">
-            <a-icon type="search"/>
-        </div>
-        <div class="header-icon">
-            <a-icon type="bell" />
-        </div>
-        <div class="logo-button">
-            <a-button :type="Type == 'Login' ? 'primary' : ''" @click="Login" shape="round">登陆</a-button>
-        </div>
-        <div class="logo-button">
-            <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
-        </div>
+        <a-row type="flex" justify="center">
+            <a-col :span="4">
+                <a-icon type="search"/>
+            </a-col>
+            <a-col :span="4">
+                <a-icon type="bell" />
+            </a-col>
+            <a-col :span="6">
+                <a-button :type="Type == 'Login' ? 'primary' : ''" @click="Login" shape="round">登陆</a-button>
+            </a-col>
+            <a-col :span="8">
+                <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
+            </a-col>
+        </a-row>
     </div>
 </template>
 

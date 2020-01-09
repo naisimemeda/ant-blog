@@ -232,22 +232,19 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
 }
 
 .navbar-category {
-  width: 40%;
+  //width: 40%;
 }
 
 .navbar-right {
-  margin-left: auto;
   height: 64px;
   width: 30%;
 }
 
 .search {
-  float: right;
-  margin: 0 55px;
+  margin-left: auto;
   line-height: 64px;
-  display: flex;
-  flex-flow: row;
-  flex: 1 100px;
+  text-align: center;
+  width: 400px;
 }
 
 

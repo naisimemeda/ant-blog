@@ -1,24 +1,26 @@
 <template>
-  <div id="wrap">
-    <TheHeader/>
-    <div class="container">
-      <router-view/>
+    <div id="wrap">
+        <a-layout>
+            <TheHeader/>
+            <div class="container">
+                <router-view/>
+            </div>
+        </a-layout>
     </div>
-  </div>
 </template>
 
 <script>
-import TheHeader from '@/components/layouts/TheHeader'
+    import TheHeader from '@/components/layouts/TheHeader'
 
-export default {
-  name: 'App',
-  components: {
-    TheHeader
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            TheHeader
+        }
+    }
 </script>
 
 <style>
-  @import "./styles/main.scss";
-  @import "./styles/extra.scss";
+    @import "./styles/main.scss";
+    @import "./styles/extra.scss";
 </style>
