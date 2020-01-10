@@ -32,7 +32,6 @@
 
 <script>
     import TheEntry from '@/components/layouts/TheEntry'
-
     export default {
         name: 'TheHeader',
         components: {
