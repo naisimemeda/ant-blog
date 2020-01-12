@@ -8,10 +8,9 @@
                     </a-input>
                 </div>
                 <div class="form-group">
-                    <a-input placeholder="请输入你的密码" :type="passwordType" v-model="password" ref="userNameInput" size="large">
+                    <a-input-password placeholder="请输入你的密码" :type="passwordType" v-model="password" ref="userNameInput" size="large">
                         <a-icon slot="prefix" type="paper-clip"/>
-                        <a-icon slot="suffix" :type="passwordIcon" @click="isHidden"/>
-                    </a-input>
+                    </a-input-password>
                 </div>
                 <div class="check">
                     <a-checkbox v-model="checked">是否保存</a-checkbox>

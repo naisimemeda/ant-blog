@@ -8,9 +8,6 @@
                 <a-layout-content>
                     <router-view/>
                 </a-layout-content>
-                <a-layout-sider class="sider">
-                    Sider
-                </a-layout-sider>
             </a-layout>
         </a-layout>
     </div>
