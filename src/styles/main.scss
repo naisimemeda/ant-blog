@@ -10,11 +10,11 @@ body {
 .ant-layout-content:nth-of-type(1) {
   color: #fff;
   line-height: 120px;
-  margin: 20px 100px 20px 50px;
+  margin: 30px 80px 20px 50px;
 }
 
 .tags-topic {
-  margin: 0px 50px;
+  margin-right: 50px;
   height: 100%;
 }
 
@@ -27,6 +27,14 @@ body {
   .sider {
     display: none;
     background-color: #ffffff;
+  }
+
+  .navbar-category {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
   }
 
   .tags-topic {
