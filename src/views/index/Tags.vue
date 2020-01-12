@@ -22,7 +22,7 @@
                 checked1: false,
                 checked2: false,
                 checked3: false,
-                tags: ['Movies', 'Books', 'Music', 'Sports', 'Books', 'Music', 'Sports', 'Books'],
+                tags: ['Movies', 'Books', 'Music', 'Sports', 'dasd', 'dasdasdasdas', 'dasdasdq', 'qweqweqwe', 'eqwrqwr'],
                 selectedTags: [],
             }
         },

@@ -1,10 +1,17 @@
 <template>
     <div id="wrap">
         <a-layout>
-            <TheHeader/>
-            <div class="container">
-                <router-view/>
-            </div>
+            <a-layout-header class="layout-header">
+                <TheHeader/>
+            </a-layout-header>
+            <a-layout class="container">
+                <a-layout-content>
+                    <router-view/>
+                </a-layout-content>
+                <a-layout-sider class="sider">
+                    Sider
+                </a-layout-sider>
+            </a-layout>
         </a-layout>
     </div>
 </template>

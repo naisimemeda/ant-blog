@@ -7,25 +7,30 @@ body {
   background: #f0f2f5;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #wrap {
     min-height:100%;
+    width: 100%;
     position:relative;
+  }
+  .sider {
+    display: none;
   }
 }
 
 .container {
-  //background-color: red;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 20px 80px 10px 70px;
 }
 
 #wrap {
-  height: auto;
-  margin: 0 auto;
-  padding: 0 0 0px;
+  text-align: center;
 }
+
+.ant-layout-content:nth-of-type(1)  {
+  color: #fff;
+  line-height: 120px;
+  margin: 20px 50px;
+}
+
 @media (min-width: 768px) {
   .main-container {
     padding-bottom:228px;
@@ -68,15 +73,6 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin: 13px 0;
-}
-
-.row-flex {
-  margin: 20px 80px 10px 50px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 70%;
-  display: flex;
-  flex-flow: row wrap;
 }
 
 .layout-header {
