@@ -1,7 +1,7 @@
 <template>
     <a-layout>
         <a-layout class="tags-topic">
-            <a-layout-header class="layout-header" style="height: 100%;border-radius: 15px;">
+            <a-layout-header class="layout-header" style="height: 100%;">
                 <Tags/>
             </a-layout-header>
             <a-layoutlayout>

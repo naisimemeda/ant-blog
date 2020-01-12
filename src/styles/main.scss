@@ -1,7 +1,6 @@
 html,
 body {
   margin: 0;
-  height: 100%;
   font-size: 14px;
   color: #525252;
   background: #f0f2f5;
@@ -91,10 +90,13 @@ body {
 }
 
 .layout-header {
-  padding: 0px;
+  padding: 0;
+  background-color: #f0f2f5;
   width: 100%;
 }
 
+.ant-layout-header {
+}
 .menu {
   line-height: 64px;
   border-bottom: 0px;

@@ -1,6 +1,6 @@
 <template>
     <a-row style="background-color: #ffffff">
-        <a-col :span="4">
+        <a-col :span="3">
             <div class="blog-logo">
                 <router-link to="/" class="router-link-active">
                     <img alt="logo" height="32" class="logo-a"
@@ -10,7 +10,7 @@
                 </router-link>
             </div>
         </a-col>
-        <a-col :span="12">
+        <a-col :span="12" >
             <div class="navbar-category">
                 <a-menu v-model="current" mode="horizontal" class="menu">
                     <a-menu-item v-for="item in navigation" :key="item.key">
@@ -20,7 +20,7 @@
                 </a-menu>
             </div>
         </a-col>
-        <a-col :span="7" :offset="1">
+        <a-col :span="7">
             <div class="navbar-right">
                 <TheEntry/>
             </div>
