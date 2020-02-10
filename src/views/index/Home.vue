@@ -4,7 +4,7 @@
             <a-layout-header class="layout-header" style="height: 100%;">
                 <Tags/>
             </a-layout-header>
-            <a-layoutlayout>
+            <a-layout>
                 <a-layout-content>
                     <a-list itemLayout="horizontal" :dataSource="data">
                         <a-list-item slot="renderItem" slot-scope="item">
@@ -20,7 +20,7 @@
                         </a-list-item>
                     </a-list>
                 </a-layout-content>
-            </a-layoutlayout>
+            </a-layout>
         </a-layout>
         <a-layout-sider class="sider" width="20%">Sider</a-layout-sider>
     </a-layout>

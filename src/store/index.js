@@ -8,18 +8,27 @@ const state = {
     user: {
 
     },
-    token: ''
+    auth: false,
+    token: '',
+    refresh_token: ''
 }
 
 const mutations = {
     UPDATE_TOKEN(state, token) {
         state.token = token
+        state.auth  = true
+    },
+    UPDATE_REFRESH_TOKEN(state, token) {
+        state.refresh_token = token
     }
 }
 
 const actions = {
-    login({ commit }, token) {
-        if (token) commit('UPDATE_TOKEN', token)
+    token({ commit }, token) {
+        if (token) {
+            commit('UPDATE_TOKEN', token.token)
+            commit('UPDATE_REFRESH_TOKEN', token.refresh_token)
+        }
         router.push('/')
     }
 }

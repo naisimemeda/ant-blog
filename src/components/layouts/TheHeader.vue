@@ -20,7 +20,7 @@
                 </a-menu>
             </div>
         </a-col>
-        <a-col :span="7">
+        <a-col :span="9">
             <div class="navbar-right">
                 <TheEntry/>
             </div>

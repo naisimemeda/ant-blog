@@ -8,7 +8,8 @@
                     </a-input>
                 </div>
                 <div class="form-group">
-                    <a-input-password placeholder="请输入你的密码" :type="passwordType" v-model="password" ref="userNameInput" size="large">
+                    <a-input-password placeholder="请输入你的密码" :type="passwordType" v-model="password" ref="userNameInput"
+                                      size="large">
                         <a-icon slot="prefix" type="paper-clip"/>
                     </a-input-password>
                 </div>
@@ -30,10 +31,10 @@
 </template>
 
 <script>
+    import { getToken } from '@/api/auth'
     export default {
         name: 'Login',
-        computed: {
-        },
+        computed: {},
         created() {
         },
         data() {
@@ -44,27 +45,22 @@
                 bodyStyle: {
                     width: 1000
                 },
-                username: '',
+                username: '2514430140@qq.com',
                 passwordType: 'password',
-                password: '',
+                password: '123456',
                 checked: true,
                 passwordIcon: 'eye-invisible',
             }
         }
         ,
         methods: {
-            isHidden() {
-                if (this.passwordIcon == "eye-invisible") {
-                    this.passwordIcon = "eye"
-                    this.passwordType = ''
-                } else {
-                    this.passwordIcon = "eye-invisible"
-                    this.passwordType = 'password'
-                }
-            },
             Login() {
-                this.$store.dispatch('login', "12312312")
-                console.log(this.$store.state.token)
+                getToken({username: this.username, password: this.password}).then(res => {
+                    let data = res.data.data
+                    let token = data.token_type + ' ' + data.access_token
+                    let refresh_token = data.refresh_token
+                    this.$store.dispatch('token', {token, refresh_token})
+                })
             }
         }
     }
@@ -77,6 +73,7 @@
         flex-flow: column;
         flex: 1;
     }
+
     .check {
         display: flex;
         line-height: 64px;

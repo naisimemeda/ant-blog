@@ -8,9 +8,16 @@
                 <a-icon type="bell" />
             </a-col>
             <a-col :span="6">
-                <a-button :type="Type == 'Login' ? 'primary' : ''" @click="Login" shape="round">登陆</a-button>
+
+                <a-button v-if="this.$store.state.auth">
+                    登陆
+                </a-button>
+                <a-button v-else
+                        :type="Type == 'Login' ? 'primary' : ''"
+                          @click="Login" shape="round">登陆
+                </a-button>
             </a-col>
-            <a-col :span="8">
+            <a-col :span="6">
                 <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
             </a-col>
         </a-row>
