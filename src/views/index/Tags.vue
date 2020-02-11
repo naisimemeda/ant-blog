@@ -28,10 +28,9 @@
         methods: {
             handleChange(tag, checked) {
                 const {selectedTags} = this;
-                const nextSelectedTags = checked
+                this.selectedTags = checked
                     ? [...selectedTags, tag]
                     : selectedTags.filter(t => t !== tag);
-                this.selectedTags = nextSelectedTags;
             },
         },
     }

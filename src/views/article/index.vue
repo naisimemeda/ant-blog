@@ -1,9 +1,9 @@
 <template>
     <a-list itemLayout="vertical" size="large" :pagination="pagination" :dataSource="listData">
         <div slot="renderItem" slot-scope="item" key="item.title"
-             style="margin-bottom: 15px;background-color: #ffffff;padding: 20px">
+             style="margin-bottom: 15px;background-color: #ffffff;padding: 20px;text-align: center">
             <a-list-item>
-                <template slot="actions">
+                <template slot="actions" style="margin-left: 50px">
                     <span>
                       <a-icon type="fire" style="margin-right: 8px"/> {{ item.hot }}
                     </span>
@@ -15,18 +15,22 @@
                     </span>
                 </template>
                 <a-list-item-meta :description="item.body">
-                    <a-avatar slot="avatar" :size="80" icon="user" :src="item.user.avatar"/>
+                    <a-avatar class="pointer" slot="avatar" :size="80" icon="user" :src="item.user.avatar" @click="user(item.user.id)"/>
                     <a slot="title">{{item.title}}</a>
                 </a-list-item-meta>
-                <div>
+                <div style="margin-top: 25px;text-align: center">
                     <a-row>
-                        <a-col :span="12">{{item.user.name}}</a-col>
+                        <a-col :span="2">
+                            <router-link to="/" style="padding-left: 0">{{item.user.name}}</router-link>
+                        </a-col>
+                        <a-col :span="10">
+                        </a-col>
                         <a-col :span="12">
                             <a-popover placement="topLeft">
                                 <template slot="content">
                                     <span>{{item.created_at}}</span>
                                 </template>
-                                <span class="create_time">
+                                <span class="create_time pointer">
                                     {{item.diff}}
                                 </span>
                             </a-popover>
@@ -65,6 +69,9 @@
                     let data = res.data.data
                     this.listData = data.article.data
                 })
+            },
+            user(user_id) {
+                console.log(user_id)
             }
         }
     };

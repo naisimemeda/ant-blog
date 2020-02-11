@@ -5,7 +5,7 @@
                 <TheHeader/>
             </a-layout-header>
             <a-layout class="container">
-                <a-layout-content class="ant-layout-content-index">
+                <a-layout-content>
                     <router-view/>
                 </a-layout-content>
             </a-layout>
@@ -27,4 +27,9 @@
 <style>
     @import "./styles/main.scss";
     @import "./styles/extra.scss";
+
 </style>
+<head>
+<style>
+</style>
+</head>

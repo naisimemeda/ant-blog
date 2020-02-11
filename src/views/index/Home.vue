@@ -1,5 +1,5 @@
 <template>
-    <a-layout>
+    <a-layout class="ant-layout-content-index">
         <a-layout class="tags-topic">
             <a-layout-header class="layout-header" style="height: 100%; margin-bottom: 30px">
                 <Tags/>

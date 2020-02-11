@@ -8,7 +8,7 @@
                 <a-icon type="bell"/>
             </a-col>
             <a-col :span="6">
-                <a-avatar v-if="this.$store.state.auth"
+                <a-avatar v-if="this.$store.state.auth" class="pointer"
                           :size="40" icon="user"
                           :src="user.avatar"/>
                 <a-button v-else
@@ -17,7 +17,9 @@
                 </a-button>
             </a-col>
             <a-col :span="6">
-                <a-button :type="type === 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
+                <router-link :to="{ name: 'ArticleCrate'}">
+                    <a-button :type="type === 'Article' ? 'primary' : ''" shape="round">写文章</a-button>
+                </router-link>
             </a-col>
         </a-row>
     </div>

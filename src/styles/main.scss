@@ -17,6 +17,9 @@ body {
   height: 100%;
 }
 
+#wrap {
+  height: 100%;
+}
 @media (max-width: 1000px) {
   #wrap {
     min-height: 100%;
@@ -39,19 +42,10 @@ body {
   .tags-topic {
     margin: 0;
   }
-  .ant-layout-content:nth-of-type(1) {
-    color: #fff;
-    line-height: 120px;
-    margin: 20px 50px;
-  }
 }
 
 .container {
   height: 100%;
-}
-
-#wrap {
-  text-align: center;
 }
 
 .sider {
