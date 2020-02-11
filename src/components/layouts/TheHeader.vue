@@ -1,6 +1,6 @@
 <template>
     <a-row style="background-color: #ffffff">
-        <a-col :span="3">
+        <a-col :span="4">
             <div class="blog-logo">
                 <router-link to="/" class="router-link-active">
                     <img alt="logo" height="32" class="logo-a"
@@ -20,7 +20,7 @@
                 </a-menu>
             </div>
         </a-col>
-        <a-col :span="9">
+        <a-col :span="8">
             <div class="navbar-right">
                 <TheEntry/>
             </div>

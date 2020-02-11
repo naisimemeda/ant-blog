@@ -1,8 +1,7 @@
 <template>
     <div class="article-filter">
         <div class="filter-tags">
-            <span>所有标签:</span>
-            <template v-for=" tag in tags">
+                <template v-for=" tag in tags">
                 <a-checkable-tag class="tags"
                                  :key="tag"
                                  :checked="selectedTags.indexOf(tag) > -1"
@@ -32,7 +31,6 @@
                 const nextSelectedTags = checked
                     ? [...selectedTags, tag]
                     : selectedTags.filter(t => t !== tag);
-                console.log('You are interested in: ', nextSelectedTags);
                 this.selectedTags = nextSelectedTags;
             },
         },

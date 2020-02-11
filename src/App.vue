@@ -5,7 +5,7 @@
                 <TheHeader/>
             </a-layout-header>
             <a-layout class="container">
-                <a-layout-content>
+                <a-layout-content class="ant-layout-content-index">
                     <router-view/>
                 </a-layout-content>
             </a-layout>

@@ -57,9 +57,10 @@
             Login() {
                 getToken({username: this.username, password: this.password}).then(res => {
                     let data = res.data.data
-                    let token = data.token_type + ' ' + data.access_token
-                    let refresh_token = data.refresh_token
-                    this.$store.dispatch('token', {token, refresh_token})
+                    let token = data.token.token_type + ' ' + data.token.access_token
+                    let refresh_token = data.token.refresh_token
+                    let user = data.user
+                    this.$store.dispatch('login', {token, refresh_token, user})
                 })
             }
         }

@@ -5,20 +5,19 @@
                 <a-icon type="search"/>
             </a-col>
             <a-col :span="4">
-                <a-icon type="bell" />
+                <a-icon type="bell"/>
             </a-col>
             <a-col :span="6">
-
-                <a-button v-if="this.$store.state.auth">
-                    登陆
-                </a-button>
+                <a-avatar v-if="this.$store.state.auth"
+                          :size="40" icon="user"
+                          :src="user.avatar"/>
                 <a-button v-else
-                        :type="Type == 'Login' ? 'primary' : ''"
+                          :type="type === 'Login' ? 'primary' : ''"
                           @click="Login" shape="round">登陆
                 </a-button>
             </a-col>
             <a-col :span="6">
-                <a-button :type="Type == 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
+                <a-button :type="type === 'Article' ? 'primary' : ''" @click="Login" shape="round">写文章</a-button>
             </a-col>
         </a-row>
     </div>
@@ -30,12 +29,21 @@
         mounted() {
         },
         computed: {
-            Type() {
+            /**
+             * @return {string}
+             */
+            type() {
                 return this.$route.name
+            },
+            user() {
+                return this.$store.state.user
             }
         },
+        created() {
+        },
         data() {
-            return {}
+            return {
+            }
         },
         methods: {
             Login() {
